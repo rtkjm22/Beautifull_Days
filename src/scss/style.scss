@@ -1,0 +1,29 @@
+@charset "utf-8";
+// すべてのページで読み込む
+
+// リセットcss + ベース
+@use './base/reset';
+@use './base/base';
+
+@use './setting/variables';
+@use './setting/extend';
+@use './setting/function';
+@use './setting/animation';
+@use './setting/helper';
+
+// 必要なmixin
+@use './mixin/mixin';
+
+// モジュールファイル
+@use './module/header';
+@use './module/gnav';
+@use './module/content/splash';
+@use './module/content/scrollDown';
+@use './module/content/lead';
+@use './module/content/menu';
+@use './module/content/contact';
+@use './module/side';
+@use './module/footer';
+// etc...
+
+@use "./pulgins/slick";

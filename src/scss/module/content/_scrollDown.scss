@@ -1,0 +1,42 @@
+@forward "../../setting/animation";
+@use '../../setting/variables'as v;
+
+.bl_scrollDown {
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  z-index: 2;
+
+  span {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+    color: #eee;
+    font-size: 0.7rem;
+    letter-spacing: 0.05em;
+    writing-mode: vertical-rl;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: -4px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: v.$white;
+    animation: circlemove 1.6s ease-in-out infinite,
+      circlemovehide 1.6s ease-out infinite;
+  }
+
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 2px;
+    height: 50px;
+    background-color: v.$white;
+  }
+}

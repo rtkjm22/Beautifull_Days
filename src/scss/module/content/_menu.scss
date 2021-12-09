@@ -1,0 +1,26 @@
+@forward "../../setting/animation";
+@use "../../setting/variables" as v;
+
+.ly_menu {
+  padding: 70px 0;
+  section {
+    background-color: v.$white;
+    margin-bottom: 10px;
+    h3 {
+      font-size: .9rem;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: .8rem;
+    }
+  }
+  .menu_area {
+    padding: 20px;
+    box-shadow: 5px 0 10px #ccc;
+  }
+  .menu_btn {
+    text-align: center;
+    margin-top: 50px;
+  }
+}
+

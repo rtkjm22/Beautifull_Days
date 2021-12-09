@@ -1,0 +1,75 @@
+@forward "./animation";
+@use "./setting/variables" as v;
+
+.hp_mainBlur {
+  filter: blur(8px);
+}
+
+.zoomOut {
+  animation: zoomOutAnime .5s forwards;
+}
+
+.btn04 {
+  position: relative;
+  display: inline-block;
+  padding: 10px 30px;
+  color: #333;
+  border: 1px solid #ccc;
+  text-decoration: none;
+  outline: none;
+  overflow: none;
+  &:hover {
+    color: v.$white;
+    border-color: transparent;
+    transition-delay: .6s;
+  }
+  span {
+    display: block;
+    z-index: 2;
+  }
+}
+.bordertop {
+  span {
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 1px;
+      height: 0;
+      background-color: v.$first;
+      transition: all .3s;
+    }
+    &::before {
+      left: 0;
+      top: 0;
+    }
+    &::after {
+      right: 0;
+      top: 0;
+    }
+  }
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    width: 100%;
+    height: 0;
+    background-color: v.$first;
+    transition: all .3s;
+  }
+}
+
+.bordertop:hover {
+  span {
+    &::before,
+    &::after {
+      height: 100%;
+    }
+  }
+  &:before {
+    height: 100%;
+    transition-delay: .4s;
+  }
+}

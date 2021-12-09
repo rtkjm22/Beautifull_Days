@@ -1,0 +1,47 @@
+@forward '../../setting/animation';
+@use '../../setting/variables' as v;
+
+.bl_lead {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding-top: 140px;
+  &_img {
+    width: 46%;
+    min-height: 400px;
+    background: url('../img/lead.jpg') no-repeat center;
+    background-size: cover;
+  }
+  &_area {
+    width: 52%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+    overflow: hidden;
+    h2, p, .bl_lead_btn a {
+      writing-mode: vertical-rl;
+      text-orientation: upright;
+    }
+    h2 {
+      width: 28%;
+      line-height: 2.5;
+      font-size: 1.4rem;
+    }
+    p {
+      width: 48%;
+      padding-top: 50px;
+      line-height: 2.8;
+    }
+  }
+  .bl_lead_btn  {
+    width: 10%;
+    height: 100%;
+    position: relative;
+    top: 240px;
+  }
+  .btn04 {
+    padding: 20px 15px;
+    line-height: 1.85;
+  }
+}

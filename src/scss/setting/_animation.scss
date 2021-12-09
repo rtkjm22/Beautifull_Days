@@ -1,0 +1,75 @@
+@keyframes pageAnimeLeft {
+  0% {
+    transform-origin: left;
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform-origin: right;
+  }
+
+  100% {
+    transform-origin: right;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes pageAnimeRight {
+  0% {
+    transform-origin: right;
+    transform: scaleX(1);
+  }
+
+  50% {
+    transform-origin: left;
+  }
+
+  100% {
+    transform-origin: left;
+    transform: scaleX(0);
+  }
+}
+
+@keyframes opacity01 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes circlemove {
+  0% {
+    bottom: 45px;
+  }
+  100% {
+    bottom: -5px;
+  }
+}
+@keyframes circlemovehide {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  80% {
+    opacity: .9;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes zoomOutAnime {
+  0% {
+    transform: scale(1.2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}

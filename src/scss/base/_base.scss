@@ -1,0 +1,71 @@
+@forward "../setting/animation";
+@use "../setting/variables"as v;
+
+/*	レイアウト	*/
+body {
+  background: v.$first;
+  font-family: "Noto Serif JP", serif;
+  color: v.$font_color;
+  font-size: 1rem;
+  line-height: 1.85;
+
+}
+
+body.appear {
+  background-color: v.$white;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: v.$font_color;
+  text-decoration: none;
+  outline: none;
+}
+
+/*	フォント関連	*/
+h1,
+.bl_gnav_list li:nth-child(1),
+.ly_menu h2,
+.ly_blog h2, 
+.ly_footer dl dd,
+.bl_splash_logo {
+  font-family: "Parisienne", cursive;
+}
+
+.ly_menu h2,
+.ly_blog h2 {
+  font-size: 4rem;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: normal;
+  color: v.$first;
+}
+
+.wrapper {
+  opacity: 0;
+}
+
+body.appear .wrapper {
+  animation: opacity01 1s 0.2s forwards;
+  opacity: 0;
+}
+
+.ly_section,
+.ly_article {
+  width: 100%;
+  margin: 0 auto;
+  padding: 70px;
+}
+
+.ly_container,
+.ly_footer {
+  overflow-x: hidden;
+  position: relative;
+  z-index: 4;
+  background-color: v.$white;
+}

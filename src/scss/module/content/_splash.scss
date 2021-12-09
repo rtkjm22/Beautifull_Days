@@ -1,0 +1,68 @@
+@forward "../../setting/extend";
+@forward "../../setting/animation";
+@use "../../setting/variables" as v;
+
+/*	splash	*/
+
+.bl_splash {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: v.$first;
+  z-index: 999999;
+  text-align: center;
+  color: v.$white;
+}
+
+.bl_splash_logo {
+  @extend .positionCenter;
+}
+
+.bl_splash_logo p {
+  font-size: 1.8rem;
+  font-weight: normal;
+  white-space: nowrap;
+}
+
+.bl_splashbgleft,
+.bl_splashbgright {
+  display: none;
+}
+
+body.appear .bl_splashbgleft,
+body.appear .bl_splashbgright {
+  display: block;
+}
+
+body.appear .bl_splashbgleft {
+  animation-name: pageAnimeLeft;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  content: "";
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 50%;
+  transform: scaleX(1);
+  background-color: v.$first;
+}
+
+body.appear .bl_splashbgright {
+  animation-name: pageAnimeRight;
+  animation-duration: 1.2s;
+  animation-timing-function: ease-in-out;
+  animation-fill-mode: forwards;
+  content: "";
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  right: 50%;
+  transform: scaleX(1);
+  background-color: v.$first;
+}
+
