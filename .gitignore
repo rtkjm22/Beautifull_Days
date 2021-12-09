@@ -1,4 +1,6 @@
 prepros.config
 .DS_Store
-img
+src/img/
 *.jqg
+*.jpeg
+*.png
