@@ -1072,6 +1072,46 @@ body.appear .bl_splashbgright {
 		margin-top: 50px;
 }
 
+.bl_contact {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-wrap: wrap;
+		    flex-wrap: wrap;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+		-webkit-box-pack: justify;
+		    -ms-flex-pack: justify;
+		        justify-content: space-between;
+		-webkit-box-orient: horizontal;
+		-webkit-box-direction: reverse;
+		    -ms-flex-direction: row-reverse;
+		        flex-direction: row-reverse;
+}
+.bl_contact_img {
+		width: 70%;
+		min-height: 300px;
+		background: url("../img/contact.jpg") no-repeat center;
+		background-size: cover;
+}
+.bl_contact_area {
+		width: 25%;
+		text-align: center;
+}
+.bl_contact_area h2 {
+		font-size: 1.3rem;
+		margin-bottom: 10px;
+}
+.bl_contact_area dt {
+		font-size: 1.2rem;
+		margin-bottom: 10px;
+}
+.bl_contact_area dd {
+		font-size: 0.8rem;
+		margin-bottom: 30px;
+}
+
 .slider {
 		width: 94%;
 		margin: 0 auto;

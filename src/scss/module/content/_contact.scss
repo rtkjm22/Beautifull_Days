@@ -1,0 +1,32 @@
+@forward "../../setting/animation";
+@use "../../setting/variables" as v;
+
+.bl_contact {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row-reverse;
+  &_img {
+    width: 70%;
+    min-height: 300px;
+    background: url("../img/contact.jpg") no-repeat center;
+    background-size: cover;
+  }
+  &_area {
+    width: 25%;
+    text-align: center;
+    h2 {
+      font-size: 1.3rem;
+      margin-bottom: 10px;
+    }
+    dt {
+      font-size: 1.2rem;
+      margin-bottom: 10px;
+    }
+    dd {
+      font-size: .8rem;
+      margin-bottom: 30px;
+    }
+  }
+}
