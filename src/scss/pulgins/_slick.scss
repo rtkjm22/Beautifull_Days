@@ -1,11 +1,17 @@
 @use '../setting/variables' as v;
+@use "../mixin/mixin" as m;
 
 .slider {
   width: 94%;
   margin: 0 auto;
   img {
     width: 100%;
-    height: auto;
+    height: 280px;
+  }
+  @include m.mq(sm) {
+    img {
+      height: 200px;
+    }
   }
   .slick-slide {
     margin: 0 10px;
