@@ -1,15 +1,21 @@
 //変数
 
 //ブレイクポイント
-$breakPointList: 767px,
-900px,
-1200px;
 
 // メディアクエリ
-$breakpoints: ('sm': 'screen and (max-width: #{nth($list: $breakPointList, $n: 1)})',
-  'md': 'screen and (max-width: #{nth($list: $breakPointList, $n: 2)})',
-  'lg': 'screen and (max-width: #{nth($list: $breakPointList, $n: 3)})',
+$breakpoints: (
+  'xs': 'screen and (max-width: 450px)',
+  'sm': 'screen and (max-width: 600px)',
+  'md': 'screen and (max-width: 820px)',
+  'lg': 'screen and (max-width: 1100px)',
+  'xl': 'screen and (max-width: 1300px)',
 ) !default;
+// $breakpoints: ('xs': 'screen and (max-width: #{nth($list: $breakPointList, $n: 1)})',
+//   'sm': 'screen and (max-width: #{nth($list: $breakPointList, $n: 2)})',
+//   'md': 'screen and (max-width: #{nth($list: $breakPointList, $n: 3)})',
+//   'lg': 'screen and (max-width: #{nth($list: $breakPointList, $n: 3)})',
+//   'xl': 'screen and (max-width: #{nth($list: $breakPointList, $n: 3)})',
+// ) !default;
 
 // 画像ディレクトリ
 $imgDir: './img/';
@@ -18,10 +24,11 @@ $imgDir: './img/';
 $first: #e2a2b1;
 $second: #e43d60;
 
+$first08: #e2a2b1dc;
+
 $white: #f8f9fa;
 $font_color: #555;
 
 
 // トランジション
 $transition: .25s;
-

@@ -1,13 +1,14 @@
 @forward "./animation";
 @forward "./extend";
 @use "./setting/variables" as v;
+@use "../mixin/mixin" as m;
 
 .hp_mainBlur {
   filter: blur(8px);
 }
 
 .zoomOut {
-  animation: zoomOutAnime .5s forwards;
+  animation: zoomOutAnime 2s forwards;
 }
 
 .btn04 {
@@ -27,6 +28,9 @@
   span {
     display: block;
     z-index: 2;
+  }
+  @include m.mq(lg) {
+    padding: 10px 30px !important;
   }
 }
 .bordertop {
@@ -92,7 +96,7 @@
       opacity: 0;
       transition: .3s ease-in-out;
       transform: translateY(100%);
-      background: #e2a2b1dc;  /// 透過
+      background: v.$first08;  /// 透過
       width: 100%;
       height: 100%
     }
@@ -114,4 +118,49 @@
       opacity: 1;
     }
   }
+}
+
+.fadeIn {
+  animation: fadeInAnime 2s forwards;
+  opacity: 0;
+}
+
+.glowAnime span {
+  opacity: 0;
+}
+.glowAnime.glow span {
+  animation: glow_anime_on 1s ease-out forwards;
+}
+
+.mainblur {
+  filter: blur(8px);
+}
+.blurTrigger {
+  opacity: 0;
+}
+.blur {
+  animation: blurAnime 1s forwards;
+}
+
+.slide_in {
+  overflow: hidden;
+  display: inline-block;
+  padding: 0 10px;
+  &_inner {
+    display: inline-block;
+  }
+}
+.leftAnime,
+.rightAnime {
+  opacity: 0;
+}
+
+.slideAnimeLeftRight {
+  animation: slideTextLR100 .8s forwards;
+  opacity: 0;
+}
+
+.slideAnimeRightLeft {
+  animation: slideTextRL100 .8s forwards;
+  opacity: 0;
 }

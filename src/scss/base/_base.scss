@@ -1,5 +1,6 @@
 @forward "../setting/animation";
 @use "../setting/variables"as v;
+@use "../mixin/mixin" as m;
 
 /*	レイアウト	*/
 body {
@@ -42,8 +43,11 @@ h1,
   font-size: 4rem;
   text-align: center;
   margin-bottom: 50px;
-  font-weight: normal;
+  font-weight: lighter;
   color: v.$first;
+  @include m.mq(md) {
+    font-size: 3rem;
+  }
 }
 
 .wrapper {
@@ -60,6 +64,9 @@ body.appear .wrapper {
   width: 100%;
   margin: 0 auto;
   padding: 70px;
+  @include m.mq(lg) {
+    padding: 30px;
+  }
 }
 
 .ly_container,

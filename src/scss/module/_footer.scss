@@ -1,0 +1,100 @@
+@forward "../setting/animation";
+@use "../setting/variables" as v;
+@use "../mixin/mixin" as m;
+
+.ly_footer {
+  border-top: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  dl {
+    width: 30%;
+    dt {
+      font-size: .8rem;
+    }
+    dd {
+      font-size: 2rem;
+    }
+  }
+  .bl_footerNav {
+    width: 65%;
+    text-align: right;
+    li {
+      display: inline-block;
+      padding: 0 10px;
+      a {
+        font-size: .8rem;
+        line-height: 3;
+      }
+    }
+    small {
+      text-align: right;
+      margin-top: 20px;
+      display: block;
+      width: 100%;
+      font-size: .7rem;
+    }
+  }
+  
+  @include m.mq {
+    dl {
+      margin: 50px 0;
+    }
+    dl,
+    .bl_footerNav,
+    small {
+      width: 100%;
+      span {
+        text-align: center;
+      }
+      text-align: center;
+    }
+  }
+  @include m.mq(sm) {
+    dl dd {
+      font-size: 1.5rem;
+    }
+  }
+}
+
+
+.bl_pageTop {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 2;
+  opacity: 0;
+  transform: translateY(100px);
+  span {
+    display: inline-block;
+    width: 13px;
+    height: 13px;
+    border-top: 4px solid #fff;
+    border-left: 4px solid #fff;
+    transform: rotate(45deg);
+  }
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: v.$first;
+    width: 60px;
+    height: 60px;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-size: .6rem;
+    transition: all v.$transition;
+    &:hover {
+      background-color: #ccc;
+    }
+  }
+  &.UpMove {
+    animation: UpAnime .5s forwards;
+  }
+  &.DownMove {
+    animation: DownAnime .5s forwards;
+  }
+}

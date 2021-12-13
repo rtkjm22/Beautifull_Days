@@ -1,5 +1,6 @@
 @forward "../../setting/animation";
 @use "../../setting/variables" as v;
+@use "../../mixin/mixin" as m;
 
 .bl_contact {
   display: flex;
@@ -27,6 +28,46 @@
     dd {
       font-size: .8rem;
       margin-bottom: 30px;
+    }
+  }
+  @include m.mq(lg) {
+    &_img {
+      width: 60%;
+    }
+    &_area {
+      width: 35%;
+    }
+  }
+  @include m.mq {
+    &_img {
+      width: 48%;
+    }
+    &_area {
+      width: 48%;
+    }
+  }
+  @include m.mq(sm) {
+    &_img,
+    &_area {
+      width: 100%;
+    }
+    &_img {
+      margin-bottom: 50px;
+    }
+
+    &_area {
+      h2 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+      }
+      dt {
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+      }
+      dd {
+        font-size: .8rem;
+        margin-bottom: 30px;
+      }
     }
   }
 }
